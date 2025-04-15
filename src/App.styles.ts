@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import BGImage from './images/background.jpg';
+import BGImage from './images/trivia.png';
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   * {
-    font-family: 'Emilys Candy', cursive;
+    font-family: 'DynaPuff', cursive;
     box-sizing: border-box;
   }
 `;
@@ -27,18 +27,19 @@ export const Wrapper = styled.div`
   align-items: center;
 
   > p {
-    color: #fff;
+    color: #000000;
+    font-weight: 200;
   }
 
   .score {
-    color: #fff;
+    color: #000000;
     font-size: 2rem;
     margin: 0;
   }
 
   h1 {
-    font-family: 'Emilys Candy', cursive;
-    background-image: linear-gradient(180deg, #fff, #87f1ff);
+    font-family: 'DynaPuff', cursive;
+    background-image: linear-gradient(180deg, #fff,rgb(243, 219, 6));
     font-weight: 400;
     background-size: 100%;
     background-clip: text;
@@ -54,7 +55,7 @@ export const Wrapper = styled.div`
 
   .start, .next {
     cursor: pointer;
-    background: linear-gradient(180deg, #ffffff, #ffcc91);
+    background: linear-gradient(180deg, #ffffff,rgb(253, 255, 145));
     border: 2px solid #d38558;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
