@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import BGImage from './images/nattu-adnan-unsplash.jpg';
+import BGImage from './images/background.jpg';
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   * {
-    font-family: 'Catamaran', sans-serif;
+    font-family: 'Emilys Candy', cursive;
     box-sizing: border-box;
   }
 `;
@@ -37,7 +37,7 @@ export const Wrapper = styled.div`
   }
 
   h1 {
-    font-family: Fascinate Inline;
+    font-family: 'Emilys Candy', cursive;
     background-image: linear-gradient(180deg, #fff, #87f1ff);
     font-weight: 400;
     background-size: 100%;
