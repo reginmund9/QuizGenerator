@@ -13,6 +13,7 @@ type Props = {
   totalQuestions: number;
 };
 
+// Renders a single quiz question with answer buttons
 const QuestionCard: React.FC<Props> = ({
   question,
   answers,

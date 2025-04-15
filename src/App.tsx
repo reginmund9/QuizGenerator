@@ -17,13 +17,14 @@ export type AnswerObject = {
 const TOTAL_QUESTIONS = 6;
 
 const App: React.FC = () => {
-  const [loading, setLoading] = useState(false);
-  const [questions, setQuestions] = useState<QuestionsState[]>([]);
-  const [number, setNumber] = useState(0);
-  const [userAnswers, setUserAnswers] = useState<AnswerObject[]>([]);
-  const [score, setScore] = useState(0);
-  const [gameOver, setGameOver] = useState(true);
-
+  // Application state
+  const [loading, setLoading] = useState(false); // Indicates if questions are being fetched
+  const [questions, setQuestions] = useState<QuestionsState[]>([]); // Stores quiz questions
+  const [number, setNumber] = useState(0); // Current question index
+  const [userAnswers, setUserAnswers] = useState<AnswerObject[]>([]); // Stores all user's answers
+  const [score, setScore] = useState(0); // Tracks user's score
+  const [gameOver, setGameOver] = useState(true); // Indicates if the game is over
+   // Start quiz and fetch new questions
   const startTrivia = async () => {
     setLoading(true);
     setGameOver(false);
@@ -37,7 +38,7 @@ const App: React.FC = () => {
     setNumber(0);
     setLoading(false);
   };
-
+   // Handles user's answer selection
   const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (!gameOver) {
       // User's answer

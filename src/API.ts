@@ -15,12 +15,14 @@ export enum Difficulty {
   HARD = "hard",
 }
 
+// Enhanced type with shuffled answers
 export type QuestionsState = Question & { answers: string[] };
-
+// Fetch quiz questions from Open Trivia API
 export const fetchQuizQuestions = async (amount: number, difficulty: Difficulty): Promise<QuestionsState[]> => {
   //const endpoint = `https://opentdb.com/api.php?amount=${amount}&difficulty=${difficulty}&type=multiple`;
   const endpoint = `https://opentdb.com/api.php?amount=${amount}&difficulty=${difficulty}&type=multiple&category=23`;
   const data = await (await fetch(endpoint)).json();
+   // Add shuffled answer array to each question
   return data.results.map((question: Question) => ({
     ...question,
     answers: shuffleArray([...question.incorrect_answers, question.correct_answer])
