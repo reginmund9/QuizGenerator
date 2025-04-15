@@ -1,3 +1,4 @@
+// core logic and UI container of app
 import React, { useState } from 'react';
 import { fetchQuizQuestions } from './API';
 // Components

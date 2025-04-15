@@ -1,3 +1,4 @@
+//shows what's passed down via props from App.tsx //reusable UI component 
 import React from 'react';
 // Types
 import { AnswerObject } from '../App';

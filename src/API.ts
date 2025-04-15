@@ -1,3 +1,4 @@
+//file to handle data fetching from the Open Trivia DB API
 import { shuffleArray } from './utils';
 
 export type Question = {
